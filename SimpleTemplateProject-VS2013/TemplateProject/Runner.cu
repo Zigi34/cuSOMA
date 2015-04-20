@@ -15,12 +15,20 @@
 #define imax(a,b) (a<b?b:a)
 
 //THREADS, BLOCKS
-#define THREADS 128
+#define THREADS 64
 #define BLOCKS imin(1024, (NUM_VALS+THREADS-1)/THREADS)
 
 //POPULATION
-#define NUM_VALS 1024
+#define NUM_VALS 8192
 #define DIMENSION 3
+
+//SOLUTION
+#define RANDOM_MAXIMUM 500
+
+//CONFIG
+#define CONF_PARMS 2
+#define CONF_PATHLENGTH 0
+#define CONF_STEP 1
 
 #pragma region SOLUTION
 typedef struct __align__(16) individual{
@@ -29,19 +37,14 @@ typedef struct __align__(16) individual{
 } individual;
 #pragma endregion
 
+typedef struct __align__(16) best_indiv {
+	float val[DIMENSION];
+	unsigned int index;
+} best_indiv;
+
+
 //LEADER
-__constant__ individual leader[1];
-
-//PRT
-__constant__ float prt[DIMENSION];
-
-//SOLUTION
-#define RANDOM_MAXIMUM 30
-
-//CONFIG
-#define CONF_PARMS 2
-#define CONF_PATHLENGTH 0
-#define CONF_STEP 1
+__constant__ best_indiv leader[1];
 __constant__ float config[CONF_PARMS];
 
 //DEBUG ERRORS
@@ -69,7 +72,7 @@ __device__ float atomicMaxf(float* address, float val)
 	}
 	return __int_as_float(old);
 }
-__global__ void max_reduce(const individual* const d_array, float* d_max, int* max_index, individual* leader, 
+__global__ void max_reduce(const individual* const d_array, float* d_max, best_indiv* leader,
 	const size_t elements)
 {
 	__shared__ float shared[THREADS];
@@ -96,9 +99,11 @@ __global__ void max_reduce(const individual* const d_array, float* d_max, int* m
 	if (tid == 0)
 		atomicMaxf(d_max, shared[0]);
 	__syncthreads();
+	
 	if (gid < elements && d_max[0] == d_array[gid].fitness) {
-		max_index[0] = gid;
-		leader[0] = d_array[gid];
+		for (int i = 0; i < DIMENSION; i++)
+			leader[0].val[i] = d_array[gid].val[i];
+		leader[0].index = gid;
 	}
 }
 #pragma endregion
@@ -166,18 +171,20 @@ float max_value(individual* values, const size_t size) {
 #pragma endregion
 
 #pragma region SOMA EVOLUTION
-__global__ void step(const individual* pop, individual* new_pop, size_t size) {
+__global__ void step(const individual* pop, individual* new_pop, float* prt, size_t size) {
 	int lid = threadIdx.x;
 	int gid = blockIdx.x * THREADS + threadIdx.x;
 	
-	#pragma unroll
-	for (int i = 0; i < DIMENSION; i++) {
-		if (prt[i] > 0.5) {
-			new_pop[gid].val[i] = (leader[0].val[i] - pop[gid].val[i]) * config[CONF_STEP] + pop[gid].val[i];
-		} else {
-			new_pop[gid].val[i] = pop[gid].val[i];
+	//for (float j = config[CONF_STEP]; j < config[CONF_PATHLENGTH]; j += config[CONF_STEP]) {
+		#pragma unroll
+		for (int i = 0; i < DIMENSION; i++) {
+			if (prt[i] > 0.5) {
+				new_pop[gid].val[i] = (leader[0].val[i] - pop[gid].val[i]) * config[CONF_STEP] + pop[gid].val[i];
+			} else {
+				new_pop[gid].val[i] = pop[gid].val[i];
+			}
 		}
-	}
+	//}
 	__syncthreads();
 }
 __global__ void evaluate(individual* individuals, const size_t size)
@@ -194,105 +201,76 @@ void soma(individual *values, const size_t size)
 {
 	dim3 blocks(BLOCKS, 1);
 	dim3 threads(THREADS, 1);
+	
+	//DEVICE
+	float* dev_fitness;
+	best_indiv* dev_leader;
+	float* dev_prt_vector;
+	curandState* dev_states;
+	individual* dev_indiv;
+	individual* dev_new_pop;
+
+	float host_config[CONF_PARMS];
+	host_config[CONF_PATHLENGTH] = 10.0;
+	host_config[CONF_STEP] = 1.1;
+
+	//int size = s * (int)(host_config[CONF_PATHLENGTH] / host_config[CONF_STEP]);
+
+	gpuErrchk(cudaMalloc((void**)&dev_fitness, size * sizeof(float)));
+	gpuErrchk(cudaMalloc((void**)&dev_leader, sizeof(best_indiv)));
+	gpuErrchk(cudaMalloc((void**)&dev_new_pop, size * sizeof(individual)));
+
+	best_indiv* host_leader = (best_indiv*)malloc(sizeof(best_indiv));
+	individual* population = (individual*)malloc(size * sizeof(individual));
 
 	#pragma region SOMA PARAMETER INITIALIZE
-	float* dev_config;
-	float host_config[CONF_PARMS];
-	host_config[CONF_PATHLENGTH] = 3.3;
-	host_config[CONF_STEP] = 1.1;
 
 	cudaMemcpyToSymbol(config, host_config, sizeof(float)* CONF_PARMS);
 	#pragma endregion
 
-	
-
-	#pragma region EVALUATE
-	individual* dev_indiv;
-	cudaMalloc((void**)&dev_indiv, size * sizeof(individual));
-	cudaMemcpy(dev_indiv, values, size * sizeof(individual), cudaMemcpyHostToDevice);
-	evaluate << <blocks, threads >> >(dev_indiv, size);
-	cudaMemcpy(values, dev_indiv, size * sizeof(individual), cudaMemcpyDeviceToHost);
-
-	float maximum = max_value(values, size);
-	printf("Maximum v poli by melo byt: %f na indexu:", maximum);
-	for (int i = 0; i < size; i++)
-		if (values[i].fitness == maximum)
-			printf("%d, ", i);
-	printf("\n");
-	#pragma endregion
-
-	#pragma region FIND BEST
-	//float* test_in;
-	float* test_out;
-	int* max_index[1];
-	int* dev_max_index;
-	individual* dev_leader;
-	individual* host_leader = (individual*)malloc(sizeof(individual));
-
-	//float* test_in_host = (float*)malloc(size * sizeof(float));
-	float* test_out_host = (float*)malloc(size * sizeof(float));
-
-	for (int i = 0; i < size; i++) {
-		test_out_host[i] = 0;
-	}
-
-	//gpuErrchk(cudaMalloc((void**)&test_in, size * sizeof(float)));
-	gpuErrchk(cudaMalloc((void**)&test_out, size * sizeof(float)));
-	gpuErrchk(cudaMalloc((void**)&dev_max_index, sizeof(int)));
-	gpuErrchk(cudaMalloc((void**)&dev_leader, sizeof(individual)));
-
-	//gpuErrchk(cudaMemcpy(test_in, test_in_host, size * sizeof(float), cudaMemcpyHostToDevice));
-	gpuErrchk(cudaMemcpy(test_out, test_out_host, size * sizeof(float), cudaMemcpyHostToDevice));
-
-	max_reduce << <blocks, threads >> >(dev_indiv, test_out, dev_max_index, dev_leader, size);
-
-	gpuErrchk(cudaMemcpy(test_out_host, test_out, size * sizeof(float), cudaMemcpyDeviceToHost));
-	gpuErrchk(cudaMemcpy(max_index, dev_max_index, sizeof(int), cudaMemcpyDeviceToHost));
-	gpuErrchk(cudaMemcpy(host_leader, dev_leader, sizeof(individual), cudaMemcpyDeviceToHost));
-
-	printf("Maximum je: %f na indexu %d\n", test_out_host[0], max_index[0]);
-	printf("Leader: (%1.3f, %1.3f, %1.3f)->%1.3f\n", host_leader[0].val[0], host_leader[0].val[1], host_leader[0].val[2], host_leader[0].fitness);
-	cudaMemcpyToSymbol(leader, host_leader, sizeof(individual));
-	#pragma endregion
-
-	#pragma region GENERATE PRT VECTOR
-	float* dev_prt_vector;
-	float* prt_vector;
-	curandState* dev_states;
-	
-	prt_vector = (float*)malloc(DIMENSION * sizeof(float));
+	#pragma region INITIALIZE
 	gpuErrchk(cudaMalloc((void**)&dev_prt_vector, DIMENSION * sizeof(float)));
 	gpuErrchk(cudaMalloc((void**)&dev_states, DIMENSION * sizeof(curandState)));
 
 	init_rand << <1, threads >> >(dev_states, DIMENSION);
 	make_rand << <1, threads >> >(dev_states, dev_prt_vector, DIMENSION);
-
-	gpuErrchk(cudaMemcpy(prt_vector, dev_prt_vector, DIMENSION * sizeof(float), cudaMemcpyDeviceToHost));
-	gpuErrchk(cudaMemcpyToSymbol(prt, prt_vector, DIMENSION * sizeof(float)));
-
-	for (int i = 0; i < DIMENSION; i++)
-		printf("Random: %f\n", prt_vector[i]);
+	#pragma endregion
+	
+	#pragma region POPULATION TO GPU
+	cudaMalloc((void**)&dev_indiv, size * sizeof(individual));
+	cudaMemcpy(dev_indiv, values, size * sizeof(individual), cudaMemcpyHostToDevice);
 	#pragma endregion
 
-	#pragma region NEW POPULATION
-	individual* dev_new_pop;
-	gpuErrchk(cudaMalloc((void**)&dev_new_pop, size * sizeof(individual)));
-	step << <blocks, threads >> >(dev_indiv, dev_new_pop, size);
+	for (int iter = 0; iter < 5000; iter++) {
+		evaluate << <blocks, threads >> >(dev_indiv, size);
+		max_reduce << <blocks, threads >> >(dev_indiv, dev_fitness, dev_leader, size);
+		gpuErrchk(cudaMemcpy(host_leader, dev_leader, sizeof(best_indiv), cudaMemcpyDeviceToHost));
 
-	individual* host_new_pop = (individual*)malloc(size * sizeof(individual));
-	gpuErrchk(cudaMemcpy(host_new_pop, dev_new_pop, size * sizeof(individual), cudaMemcpyDeviceToHost));
+		//printf("Leader: (%1.3f, %1.3f, %1.3f)(%d)\n", host_leader[0].val[0], host_leader[0].val[1], host_leader[0].val[2], host_leader[0].index);
+		cudaMemcpyToSymbol(leader, host_leader, sizeof(best_indiv));
 
-	for (int i = 0; i < 20; i++)
-		printf("(%1.3f, %1.3f, %1.3f)->%1.3f\n", host_new_pop[i].val[0], host_new_pop[i].val[1], host_new_pop[i].val[2], host_new_pop[i].fitness);
-	#pragma endregion
+		make_rand << <1, threads >> >(dev_states, dev_prt_vector, DIMENSION);
+		step << <blocks, threads >> >(dev_indiv, dev_new_pop, dev_prt_vector, size);
 
-	cudaFree(dev_max_index);
-	cudaFree(test_out);
+		gpuErrchk(cudaMemcpy(population, dev_indiv, size * sizeof(individual), cudaMemcpyDeviceToHost));
+		//for (int i = 0; i < 10; i++)
+			//printf("%1.3f, %1.3f, %1.3f = %1.3f\n", population[i].val[0], population[i].val[1], population[i].val[2], population[i].fitness);
+		//printf("\n");
+
+		individual * temp = dev_new_pop;
+		dev_new_pop = dev_indiv;
+		dev_indiv = temp;
+	}
+	
+	free(host_leader);
+	free(population);
+
+	cudaFree(dev_fitness);
+	cudaFree(dev_leader);
 	cudaFree(dev_prt_vector);
 	cudaFree(dev_states);
 	cudaFree(dev_indiv);
-	free(test_out_host);
-	
+	cudaFree(dev_new_pop);
 }
 
 #pragma endregion
