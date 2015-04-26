@@ -1787,3 +1787,135 @@
 (evaluated) elapsed: 4.141
 (copy to device) elapsed: 3.474
 (evaluated) elapsed: 4.141
+(copy to device) elapsed: 4.352
+(evaluated) elapsed: 4.150
+(copy to device) elapsed: 4.002
+(evaluated) elapsed: 4.139
+(copy to device) elapsed: 0.196
+(evaluated) elapsed: 0.014
+(copy to device) elapsed: 0.162
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.114
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.115
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.187
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.121
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.289
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.221
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.146
+(evaluated) elapsed: 0.014
+(copy to device) elapsed: 0.165
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.167
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.186
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.215
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.299
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.171
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.150
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.187
+(evaluated) elapsed: 0.014
+(copy to device) elapsed: 0.139
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.178
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.114
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.178
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.183
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 1.079
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.188
+(evaluated) elapsed: 0.012
+(copy to device) elapsed: 0.082
+(evaluated) elapsed: 0.099
+(copy to device) elapsed: 0.130
+(evaluated) elapsed: 0.097
+(copy to device) elapsed: 0.229
+(evaluated) elapsed: 0.098
+(copy to device) elapsed: 0.181
+(evaluated) elapsed: 0.097
+(copy to device) elapsed: 0.139
+(evaluated) elapsed: 0.097
+(copy to device) elapsed: 0.484
+(evaluated) elapsed: 0.097
+(copy to device) elapsed: 0.142
+(evaluated) elapsed: 0.097
+(copy to device) elapsed: 0.282
+(evaluated) elapsed: 0.097
+(copy to device) elapsed: 0.204
+(evaluated) elapsed: 0.193
+(copy to device) elapsed: 0.204
+(evaluated) elapsed: 0.192
+(copy to device) elapsed: 0.223
+(evaluated) elapsed: 0.192
+(copy to device) elapsed: 0.345
+(evaluated) elapsed: 0.192
+(copy to device) elapsed: 0.191
+(evaluated) elapsed: 0.192
+(copy to device) elapsed: 0.764
+(evaluated) elapsed: 0.192
+(copy to device) elapsed: 0.145
+(evaluated) elapsed: 0.192
+(copy to device) elapsed: 0.122
+(evaluated) elapsed: 0.192
+(copy to device) elapsed: 0.156
+(evaluated) elapsed: 0.191
+(copy to device) elapsed: 0.323
+(evaluated) elapsed: 0.192
+(copy to device) elapsed: 0.121
+(evaluated) elapsed: 0.195
+(copy to device) elapsed: 0.126
+(evaluated) elapsed: 0.195
+(copy to device) elapsed: 0.121
+(evaluated) elapsed: 0.198
+(copy to device) elapsed: 0.343
+(evaluated) elapsed: 0.198
+(copy to device) elapsed: 0.137
+(evaluated) elapsed: 0.201
+(copy to device) elapsed: 0.146
+(evaluated) elapsed: 0.201
+(copy to device) elapsed: 0.109
+(evaluated) elapsed: 0.205
+(copy to device) elapsed: 0.227
+(evaluated) elapsed: 0.204
+(copy to device) elapsed: 0.110
+(evaluated) elapsed: 0.208
+(copy to device) elapsed: 0.171
+(evaluated) elapsed: 0.208
+(copy to device) elapsed: 0.223
+(evaluated) elapsed: 0.211
+(copy to device) elapsed: 0.118
+(evaluated) elapsed: 0.211
+(copy to device) elapsed: 0.120
+(evaluated) elapsed: 0.214
+(copy to device) elapsed: 0.109
+(evaluated) elapsed: 0.214
+(copy to device) elapsed: 0.105
+(evaluated) elapsed: 0.218
+(copy to device) elapsed: 0.147
+(evaluated) elapsed: 0.218
+(copy to device) elapsed: 0.109
+(evaluated) elapsed: 0.218
+(copy to device) elapsed: 0.143
+(evaluated) elapsed: 0.218
+(copy to device) elapsed: 0.132
+(evaluated) elapsed: 0.218
+(copy to device) elapsed: 0.104
+(evaluated) elapsed: 0.218
+(copy to device) elapsed: 0.136
+(evaluated) elapsed: 0.221
+(copy to device) elapsed: 0.159
+(evaluated) elapsed: 0.221

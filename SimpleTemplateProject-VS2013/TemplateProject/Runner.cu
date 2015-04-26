@@ -17,12 +17,12 @@
 //#define SHARED 32
 
 //POPULATION
-#define NUM_VALS_BLOCK 256
-#define NUM_VALS 512
-#define DIMENSION 8192
+#define NUM_VALS_BLOCK 32
+#define NUM_VALS 256
+#define DIMENSION 512
 
 //THREADS, BLOCKS
-#define THREADS 64
+#define THREADS 32
 #define BLOCKS imin(8192, (NUM_VALS_BLOCK+THREADS-1)/THREADS)
 
 //SOLUTION
@@ -408,6 +408,8 @@ int main(int argc, char *argv[])
 {
 	pFile = fopen("log.txt", "a");
 	float elapsedTime = 0.0;
+	float elapsedMemcpy = 0.0;
+	float elapsedKernel = 0.0;
 	
 	cudaEvent_t startEvent, stopEvent;
 	cudaEventCreate(&startEvent);
@@ -416,8 +418,10 @@ int main(int argc, char *argv[])
 	printf("Velikost populace: %d\n", real_size);
 
 	int max_size = imin(NUM_VALS_BLOCK, real_size);
-	float *host_in = (float*)malloc(real_size * DIMENSION * sizeof(float));
-	float *host_out = (float*)malloc(max_size * sizeof(float));
+	float *host_in;// = (float*)malloc(real_size * DIMENSION * sizeof(float));
+	cudaMallocHost(&host_in, real_size * DIMENSION * sizeof(float));
+	float *host_out;// = (float*)malloc(max_size * sizeof(float));
+	cudaMallocHost(&host_out, real_size * sizeof(float));
 	printf("Max size = %d\n", max_size);
 	population_fill(host_in, real_size);
 	real_size -= max_size;
@@ -434,38 +438,45 @@ int main(int argc, char *argv[])
 		cudaEventRecord(stopEvent, 0);
 		cudaEventSynchronize(stopEvent);
 		cudaEventElapsedTime(&elapsedTime, startEvent, stopEvent);
-		printf("Copy to device %1.3f\n", elapsedTime);
-		log("copy to device", elapsedTime);
+		elapsedMemcpy += elapsedTime;
+		//printf("Copy to device %1.3f\n", elapsedTime);
+		//log("copy to device", elapsedTime);
 
 		cudaEventRecord(startEvent, 0);
 		operace<< <BLOCKS, THREADS >> >(device_in, device_out);
 		cudaEventRecord(stopEvent, 0);
 		cudaEventSynchronize(stopEvent);
 		cudaEventElapsedTime(&elapsedTime, startEvent, stopEvent);
-		printf("Evaluated %1.3f\n", elapsedTime);
-		log("evaluated", elapsedTime);
+		elapsedKernel += elapsedTime;
+		//printf("Evaluated %1.3f\n", elapsedTime);
+		//log("evaluated", elapsedTime);
 	
 		gpuErrchk(cudaMemcpy(host_out, device_out, sizeof(float)* max_size, cudaMemcpyDeviceToHost));
 
+		/*
 		for (int i = 0; i < imin(10, max_size); i++)
 			printf("%1.3f\n", host_out[i]);
 
 		if (test(host_out, max_size))
 			printf("OK\n");
-	
+		*/
 		host_in_start += max_size*DIMENSION;
 		max_size = imin(real_size, NUM_VALS_BLOCK);
 		real_size -= max_size;
 	}
 
+	printf("Memcpy: %1.3f\n",elapsedMemcpy);
+	printf("Kernel: %1.3f\n", elapsedKernel);
 	cudaFree(device_in);
 	cudaFree(device_out);
+	cudaFreeHost(host_in);
+	cudaFreeHost(host_out);
 
 	//soma(values, size);
 	cudaEventDestroy(startEvent);
 	cudaEventDestroy(stopEvent);
-	free(host_in);
-	free(host_out);
+	//free(host_in);
+	//free(host_out);
 	fclose(pFile);
 }
 
