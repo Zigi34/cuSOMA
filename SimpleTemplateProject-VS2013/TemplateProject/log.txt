@@ -1,0 +1,1789 @@
+(evaluat) elapsed: 0.026
+(evaluat) elapsed: 0.026
+(evaluat) elapsed: 0.026
+(evaluat) elapsed: 0.025
+(evaluat) elapsed: 0.025
+(evaluat) elapsed: 0.025
+(evaluat) elapsed: 0.026
+(evaluat) elapsed: 0.026
+(evaluat) elapsed: 0.026
+(evaluat) elapsed: 0.026
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.118
+(random) elapsed: 0.006
+(step) elapsed: 0.053
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.054
+(evaluat) elapsed: 0.025
+(reduce) elapsed: 0.118
+(random) elapsed: 0.006
+(step) elapsed: 0.053
+(evaluat) elapsed: 0.025
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.053
+(evaluat) elapsed: 0.025
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.059
+(evaluat) elapsed: 0.025
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.047
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.118
+(random) elapsed: 0.006
+(step) elapsed: 0.041
+(evaluat) elapsed: 0.025
+(reduce) elapsed: 0.118
+(random) elapsed: 0.006
+(step) elapsed: 0.047
+(evaluat) elapsed: 0.025
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.059
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.059
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.052
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.053
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.118
+(random) elapsed: 0.006
+(step) elapsed: 0.054
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.054
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.118
+(random) elapsed: 0.006
+(step) elapsed: 0.058
+(evaluat) elapsed: 0.025
+(reduce) elapsed: 0.118
+(random) elapsed: 0.006
+(step) elapsed: 0.048
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.119
+(random) elapsed: 0.006
+(step) elapsed: 0.041
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.118
+(random) elapsed: 0.006
+(step) elapsed: 0.047
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.119
+(random) elapsed: 0.006
+(step) elapsed: 0.059
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.120
+(random) elapsed: 0.006
+(step) elapsed: 0.059
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.052
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.118
+(random) elapsed: 0.006
+(step) elapsed: 0.054
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.054
+(evaluat) elapsed: 0.027
+(reduce) elapsed: 0.119
+(random) elapsed: 0.006
+(step) elapsed: 0.053
+(evaluat) elapsed: 0.025
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.059
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.048
+(evaluat) elapsed: 0.025
+(reduce) elapsed: 0.116
+(random) elapsed: 0.006
+(step) elapsed: 0.040
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.116
+(random) elapsed: 0.006
+(step) elapsed: 0.048
+(evaluat) elapsed: 0.026
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.059
+(evaluat) elapsed: 0.025
+(reduce) elapsed: 0.117
+(random) elapsed: 0.006
+(step) elapsed: 0.059
+(evaluat) elapsed: 0.163
+(reduce) elapsed: 0.716
+(random) elapsed: 0.006
+(step) elapsed: 0.281
+(evaluat) elapsed: 0.162
+(reduce) elapsed: 0.716
+(random) elapsed: 0.006
+(step) elapsed: 0.289
+(evaluat) elapsed: 0.163
+(reduce) elapsed: 0.717
+(random) elapsed: 0.006
+(step) elapsed: 0.290
+(evaluat) elapsed: 0.162
+(reduce) elapsed: 0.718
+(random) elapsed: 0.006
+(step) elapsed: 0.291
+(evaluat) elapsed: 0.162
+(reduce) elapsed: 0.717
+(random) elapsed: 0.006
+(step) elapsed: 0.311
+(evaluat) elapsed: 0.163
+(reduce) elapsed: 0.714
+(random) elapsed: 0.006
+(step) elapsed: 0.264
+(evaluat) elapsed: 0.162
+(reduce) elapsed: 0.716
+(random) elapsed: 0.006
+(step) elapsed: 0.243
+(evaluat) elapsed: 0.162
+(reduce) elapsed: 0.716
+(random) elapsed: 0.006
+(step) elapsed: 0.265
+(evaluat) elapsed: 0.162
+(reduce) elapsed: 0.715
+(random) elapsed: 0.006
+(step) elapsed: 0.311
+(evaluat) elapsed: 0.162
+(reduce) elapsed: 0.717
+(random) elapsed: 0.006
+(step) elapsed: 0.311
+(evaluat) elapsed: 42.236
+(reduce) elapsed: 65.179
+(random) elapsed: 38.805
+(step) elapsed: 48.957
+(evaluat) elapsed: 42.522
+(reduce) elapsed: 65.032
+(random) elapsed: 38.950
+(step) elapsed: 52.602
+(evaluat) elapsed: 45.711
+(reduce) elapsed: 64.723
+(random) elapsed: 37.545
+(step) elapsed: 51.667
+(evaluat) elapsed: 42.498
+(reduce) elapsed: 63.019
+(random) elapsed: 38.278
+(step) elapsed: 48.945
+(evaluat) elapsed: 44.952
+(reduce) elapsed: 64.456
+(random) elapsed: 38.162
+(step) elapsed: 51.667
+(evaluat) elapsed: 43.831
+(reduce) elapsed: 63.415
+(random) elapsed: 38.942
+(step) elapsed: 48.567
+(evaluat) elapsed: 43.599
+(reduce) elapsed: 63.757
+(random) elapsed: 39.169
+(step) elapsed: 47.930
+(evaluat) elapsed: 41.753
+(reduce) elapsed: 62.813
+(random) elapsed: 35.801
+(step) elapsed: 47.223
+(evaluat) elapsed: 40.933
+(reduce) elapsed: 60.373
+(random) elapsed: 33.948
+(step) elapsed: 45.621
+(evaluat) elapsed: 43.902
+(reduce) elapsed: 61.033
+(random) elapsed: 37.414
+(step) elapsed: 45.857
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.164
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.164
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.163
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.161
+(evaluat) elapsed: 0.162
+(evaluat) elapsed: 0.162
+(evaluated) elapsed: 0.014
+(evaluated) elapsed: 0.014
+(evaluated) elapsed: 0.014
+(evaluated) elapsed: 0.014
+(evaluated) elapsed: 0.013
+(evaluated) elapsed: 0.013
+(evaluated) elapsed: 0.014
+(evaluated) elapsed: 0.013
+(evaluated) elapsed: 0.013
+(evaluated) elapsed: 0.014
+(evaluated) elapsed: 0.024
+(evaluated) elapsed: 0.024
+(evaluated) elapsed: 0.024
+(evaluated) elapsed: 0.024
+(evaluated) elapsed: 0.024
+(evaluated) elapsed: 0.134
+(evaluated) elapsed: 0.134
+(evaluated) elapsed: 0.310
+(evaluated) elapsed: 0.133
+(evaluated) elapsed: 2.081
+(evaluated) elapsed: 2.078
+(evaluated) elapsed: -107374176.000
+(evaluated) elapsed: 0.580
+(evaluated) elapsed: 0.581
+(evaluated) elapsed: 1.151
+(evaluated) elapsed: 2.079
+(evaluated) elapsed: 4.185
+(evaluated) elapsed: 4.175
+(evaluated) elapsed: 4.179
+(evaluated) elapsed: 4.186
+(evaluated) elapsed: 5.116
+(copy to device) elapsed: 9.858
+(evaluated) elapsed: 5.105
+(copy to device) elapsed: 9.572
+(evaluated) elapsed: 5.109
+(copy to device) elapsed: 2.287
+(evaluated) elapsed: 2.287
+(copy to device) elapsed: 0.389
+(evaluated) elapsed: 0.389
+(copy to device) elapsed: 0.063
+(evaluated) elapsed: 0.030
+(copy to device) elapsed: 0.065
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.090
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.089
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.088
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.092
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.107
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.073
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.075
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.138
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.055
+(evaluated) elapsed: 0.030
+(copy to device) elapsed: 0.056
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.070
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.071
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.088
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.088
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.078
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.091
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.092
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.109
+(evaluated) elapsed: 0.028
+(copy to device) elapsed: 0.122
+(evaluated) elapsed: 0.030
+(copy to device) elapsed: 0.129
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.122
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.127
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.148
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.151
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.129
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.127
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.162
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.151
+(evaluated) elapsed: 0.027
+(copy to device) elapsed: 0.152
+(evaluated) elapsed: 0.007
+(copy to device) elapsed: 0.093
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.098
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.107
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.109
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.109
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.112
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.136
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.104
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.111
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.064
+(evaluated) elapsed: 0.007
+(copy to device) elapsed: 0.061
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.077
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.082
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.100
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.074
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.099
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.082
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.081
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 0.098
+(evaluated) elapsed: 0.004
+(copy to device) elapsed: 1.638
+(evaluated) elapsed: 4.167
+(copy to device) elapsed: 1.001
+(evaluated) elapsed: 4.175
+(copy to device) elapsed: 2.392
+(evaluated) elapsed: 4.201
+(copy to device) elapsed: 0.281
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.320
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.305
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.303
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.314
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.306
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.312
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.288
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.306
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.305
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.304
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.299
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.307
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.315
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.303
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.456
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.315
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.371
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.357
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.356
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.300
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.308
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.368
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.357
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.287
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.335
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.266
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.281
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.270
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.377
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.316
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.310
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.356
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.321
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.304
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.300
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.278
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.272
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.342
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.289
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.267
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.294
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.280
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.284
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.327
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.272
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.282
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.287
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.313
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.276
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.527
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.415
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.247
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.281
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.259
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.243
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.283
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.249
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.242
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.888
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.297
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.247
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.280
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.303
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.226
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.251
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.223
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.234
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.332
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.280
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.249
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.246
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.245
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.240
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.257
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.264
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.289
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.280
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.417
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.235
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.279
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.238
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.253
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.245
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.348
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.258
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.297
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.305
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.260
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.205
+(evaluated) elapsed: 2.197
+(copy to device) elapsed: 2.998
+(evaluated) elapsed: 4.191
+(copy to device) elapsed: 0.200
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.281
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.284
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.282
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.280
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.281
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.317
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.279
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.262
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.283
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.280
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.281
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.283
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.297
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.283
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.282
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.283
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.280
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.280
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.312
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.314
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.306
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.232
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.299
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.204
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.233
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.228
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.245
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.260
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.272
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.264
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.248
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.230
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.215
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.210
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.191
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.194
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.188
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.318
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.238
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.233
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.268
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.243
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.248
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.267
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.196
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.243
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.240
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.229
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.259
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.236
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.226
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.245
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.237
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.226
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.193
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.203
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.258
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.211
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.202
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.195
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.245
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.238
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.235
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.235
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.232
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.239
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.235
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.226
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.194
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.978
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.238
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.188
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.284
+(evaluated) elapsed: 2.526
+(copy to device) elapsed: 0.245
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.235
+(evaluated) elapsed: 2.525
+(copy to device) elapsed: 0.203
+(evaluated) elapsed: 2.333
+(copy to device) elapsed: 4.478
+(evaluated) elapsed: 4.141
+(copy to device) elapsed: 0.293
+(evaluated) elapsed: 4.139
+(copy to device) elapsed: 0.457
+(evaluated) elapsed: 4.137
+(copy to device) elapsed: 0.464
+(evaluated) elapsed: 4.136
+(copy to device) elapsed: 0.453
+(evaluated) elapsed: 4.134
+(copy to device) elapsed: 0.403
+(evaluated) elapsed: 4.141
+(copy to device) elapsed: 0.277
+(evaluated) elapsed: 4.150
+(copy to device) elapsed: 0.292
+(evaluated) elapsed: 4.144
+(copy to device) elapsed: 0.203
+(evaluated) elapsed: 4.139
+(copy to device) elapsed: 0.202
+(evaluated) elapsed: 4.143
+(copy to device) elapsed: 0.316
+(evaluated) elapsed: 4.137
+(copy to device) elapsed: 0.289
+(evaluated) elapsed: 4.148
+(copy to device) elapsed: 0.351
+(evaluated) elapsed: 4.142
+(copy to device) elapsed: 0.284
+(evaluated) elapsed: 4.145
+(copy to device) elapsed: 0.245
+(evaluated) elapsed: 4.147
+(copy to device) elapsed: 0.287
+(evaluated) elapsed: 4.141
+(copy to device) elapsed: 0.281
+(evaluated) elapsed: 4.139
+(copy to device) elapsed: 0.277
+(evaluated) elapsed: 4.142
+(copy to device) elapsed: 0.287
+(evaluated) elapsed: 4.144
+(copy to device) elapsed: 0.288
+(evaluated) elapsed: 4.135
+(copy to device) elapsed: 0.283
+(evaluated) elapsed: 4.135
+(copy to device) elapsed: 0.289
+(evaluated) elapsed: 4.140
+(copy to device) elapsed: 0.283
+(evaluated) elapsed: 4.144
+(copy to device) elapsed: 0.276
+(evaluated) elapsed: 4.141
+(copy to device) elapsed: 0.264
+(evaluated) elapsed: 4.138
+(copy to device) elapsed: 0.239
+(evaluated) elapsed: 4.140
+(copy to device) elapsed: 0.203
+(evaluated) elapsed: 4.141
+(copy to device) elapsed: 3.646
+(evaluated) elapsed: 4.140
+(copy to device) elapsed: 2.939
+(evaluated) elapsed: 4.145
+(copy to device) elapsed: 3.433
+(evaluated) elapsed: 5.053
+(copy to device) elapsed: 3.062
+(evaluated) elapsed: 5.057
+(copy to device) elapsed: 2.277
+(evaluated) elapsed: 4.145
+(copy to device) elapsed: 2.198
+(evaluated) elapsed: 4.137
+(copy to device) elapsed: 3.442
+(evaluated) elapsed: 4.138
+(copy to device) elapsed: 3.460
+(evaluated) elapsed: 4.139
+(copy to device) elapsed: 4.087
+(evaluated) elapsed: 4.140
+(copy to device) elapsed: 4.154
+(evaluated) elapsed: 4.143
+(copy to device) elapsed: 3.561
+(evaluated) elapsed: 4.141
+(copy to device) elapsed: 3.474
+(evaluated) elapsed: 4.141
