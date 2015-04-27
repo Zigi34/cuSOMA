@@ -371,7 +371,7 @@ int main(int argc, char *argv[])
 	float* host_out_start = host_out;
 	float* dev_prt_vector;
 	curandState* dev_states;
-
+	init_rand << <PRT_BLOCKS, THREADS >> >(dev_states, DIMENSION);
 	gpuErrchk(cudaMalloc((void**)&device_in, max_size * DIMENSION * sizeof(float)));
 	gpuErrchk(cudaMalloc((void**)&device_out, max_size * sizeof(float)));
 	gpuErrchk(cudaMalloc((void**)&device_leader_index, sizeof(int)));
@@ -422,16 +422,19 @@ int main(int argc, char *argv[])
 	for (int i = host_leader_index[0]; i < DIMENSION * NUM_VALS; i += DIMENSION) {
 		host_leader[index++] = host_in[i];
 	}
-
-	cudaMemcpyToSymbol(config, host_leader, sizeof(float)* DIMENSION);
+	cudaMemcpyToSymbol(config, host_leader, sizeof(float) * DIMENSION);
 
 	cudaEventRecord(startEvent, 0);
-	init_rand << <PRT_BLOCKS, THREADS >> >(dev_states, DIMENSION);
 	make_rand << <PRT_BLOCKS, THREADS >> >(dev_states, dev_prt_vector, DIMENSION);
 	cudaEventRecord(stopEvent, 0);
 	cudaEventSynchronize(stopEvent);
 	cudaEventElapsedTime(&elapsedTime, startEvent, stopEvent);
 	printf("Random: %1.3f\n", elapsedTime);
+
+	float* host_prt_vector = (float*)malloc(sizeof(float) * DIMENSION);
+	gpuErrchk(cudaMemcpy(host_prt_vector, dev_prt_vector, sizeof(float)* DIMENSION, cudaMemcpyDeviceToHost));
+	for (int i = 0; i < DIMENSION; i++)
+		printf("%1.3f\n", host_prt_vector[i]);
 
 	printf("Maximum na indexu %d\n", host_leader_index[0]);
 	
