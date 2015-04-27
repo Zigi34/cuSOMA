@@ -18,12 +18,14 @@
 
 //POPULATION
 #define NUM_VALS_BLOCK 32
-#define NUM_VALS 256
-#define DIMENSION 512
+#define NUM_VALS 32
+#define DIMENSION 16
 
 //THREADS, BLOCKS
 #define THREADS 32
+#define FITNESS_THREADS 32
 #define BLOCKS imin(8192, (NUM_VALS_BLOCK+THREADS-1)/THREADS)
+#define FITNESS_BLOCKS imin(8192, (NUM_VALS+FITNESS_THREADS-1)/FITNESS_THREADS)
 
 //SOLUTION
 #define RANDOM_MAXIMUM 500
@@ -34,20 +36,6 @@
 #define CONF_STEP 1
 
 #define ITERATION 1000
-
-/*
-#pragma region SOLUTION
-typedef struct __align__(16) individual{
-	float val[DIMENSION];
-	float fitness;
-} individual;
-#pragma endregion
-
-typedef struct __align__(16) best_indiv {
-	float val[DIMENSION];
-	unsigned int index;
-} best_indiv;
-*/
 
 //LEADER
 //__constant__ best_indiv leader[1];
@@ -73,7 +61,7 @@ inline void gpuAssert(cudaError_t code, const char *file, int line, bool abort =
 #pragma endregion
 
 #pragma region REDUCTION
-/*
+
 __device__ float atomicMaxf(float* address, float val)
 {
 	int *address_as_int = (int*)address;
@@ -85,17 +73,17 @@ __device__ float atomicMaxf(float* address, float val)
 	}
 	return __int_as_float(old);
 }
-__global__ void max_reduce(const individual* const d_array, float* d_max, best_indiv* leader,
+__global__ void max_reduce(const float* values, int* max_index, float* maximum, 
 	const size_t elements)
 {
-	__shared__ float shared[THREADS];
+	__shared__ float shared[FITNESS_THREADS];
 
 	int tid = threadIdx.x;
 	int gid = (blockDim.x * blockIdx.x) + tid;
 	shared[tid] = 0.0f;
 
 	if (gid < elements)
-		shared[tid] = d_array[gid].fitness;
+		shared[tid] = values[gid];
 	__syncthreads();
 
 	for (unsigned int s = blockDim.x / 2; s>0; s >>= 1)
@@ -104,22 +92,21 @@ __global__ void max_reduce(const individual* const d_array, float* d_max, best_i
 			shared[tid] = max(shared[tid], shared[tid + s]);  // 2
 		__syncthreads();
 	}
-	// what to do now?
-	// option 1: save block result and launch another kernel
-	if (tid == 0)
-		d_max[blockIdx.x] = shared[tid]; // 3
-	// option 2: use atomics
-	if (tid == 0)
-		atomicMaxf(d_max, shared[0]);
-	__syncthreads();
 	
-	if (gid < elements && d_max[0] == d_array[gid].fitness) {
-		for (int i = 0; i < DIMENSION; i++)
-			leader[0].val[i] = d_array[gid].val[i];
-		leader[0].index = gid;
+	__syncthreads();
+	if (tid == 0) {
+		maximum[blockIdx.x] = shared[tid];
+		atomicMaxf(maximum, shared[0]);
+	}	
+	__syncthreads();
+	if (gid < elements && maximum[0] == values[gid]) {
+		__syncthreads();
+		if (gid < elements) {
+			*max_index = gid;
+		}
 	}
 }
-*/
+
 #pragma endregion
 
 #pragma region RANDOM GENERATOR
@@ -138,59 +125,44 @@ __global__ void make_rand(curandState *state, float
 */
 #pragma endregion
 
-#pragma region RANDOM POPULATION
-/*
-__global__ void random_population(curandState *state, individual* pop, const size_t size) {
-	int idx = blockIdx.x * blockDim.x + threadIdx.x;
-	if (idx < size) {
-		for (int i = 0; i < DIMENSION; i++)
-			pop[idx].val[i] = curand_uniform(&state[idx]) * RANDOM_MAXIMUM;
-	}
-}
-*/
-#pragma endregion
-
 #pragma region UTIL FUNCTION
-/*
-void print_elapsed(clock_t start, clock_t stop)
-{
-	double elapsed = ((double)(stop - start)) / CLOCKS_PER_SEC;
-	printf("Elapsed time: %.3fs\n", elapsed);
-}
-*/
 float random_float()
 {
 	return (float)(rand() % RANDOM_MAXIMUM) + 1.0;
 }
-/*
-void individual_print(individual *population, const size_t size)
+float random_int()
 {
-	int i;
-	for (i = 0; i < NUM_VALS; ++i) {
-		printf("(%1.1f, %1.1f, %1.1f) -> %1.1f\n ", population[i].val[0], population[i].val[1], population[i].val[2], population[i].fitness);
-	}
-	printf("\n");
+	return (int)(rand() % RANDOM_MAXIMUM) + 1.0;
 }
-void population_fill(individual *arr, const size_t size)
-{
-	srand(time(NULL));
-	for (int i = 0; i < size; ++i) {
-		arr[i].val[0] = random_float();
-		arr[i].val[1] = random_float();
-		arr[i].val[2] = random_float();
-		arr[i].fitness = 0.0;
-	}
-}
-float max_value(individual* values, const size_t size) {
+float max_value(float* values, const size_t size) {
 	float vysledek = 0.0;
 	for (int i = 0; i<size; i++) {
-		if (values[i].fitness > vysledek)
-			vysledek = values[i].fitness;
+		if (values[i] > vysledek)
+			vysledek = values[i];
 	}
 	return vysledek;
 }
-*/
 #pragma endregion
+
+#pragma region POPULATION
+void population_fill(float* arr, const size_t size)
+{
+	int index = 0;
+	int all = size;
+
+	int result = imin(NUM_VALS_BLOCK, all);
+	all -= NUM_VALS_BLOCK;
+
+	while (result > 0) {
+		for (int i = 0; i < DIMENSION; ++i) {
+			for (int j = 0; j < result; j++)
+				arr[index++] = random_float();
+		}
+		result = imin(NUM_VALS_BLOCK, all);
+		all -= result;
+	}
+}
+#pragma endregions
 
 #pragma region SOMA EVOLUTION
 /*
@@ -344,24 +316,6 @@ void soma(float *values, const size_t size)
 */
 #pragma endregion
 
-void population_fill(float* arr, const size_t size)
-{
-	int index = 0;
-	int all = size;
-	
-	int result = imin(NUM_VALS_BLOCK, all);
-	all -= NUM_VALS_BLOCK;
-	
-	while (result > 0) {
-		for (int i = 0; i < DIMENSION; ++i) {
-			for (int j = 0; j < result; j++)
-				arr[index++] = i + 1;
-		}
-		result = imin(NUM_VALS_BLOCK, all);
-		all -= result;
-	}
-}
-
 __global__ void operace(float* in, float* out) {
 	__shared__ float temp[NUM_VALS_BLOCK];
 
@@ -379,22 +333,6 @@ __global__ void operace(float* in, float* out) {
 	}
 	__syncthreads();
 }
-__global__ void operace2(float* in, float* out, unsigned int size) {
-	__shared__ float temp[THREADS];
-
-	unsigned int gid = blockDim.x * blockIdx.x + threadIdx.x;
-	unsigned int lid = threadIdx.x;
-	temp[lid] = 0;	//copy to shared
-
-	if (gid < size) {
-		for (unsigned int i = 0; i < DIMENSION; i += 1)
-		{
-			temp[lid] += in[gid * DIMENSION + i];
-		}
-		out[gid] = temp[lid];
-	}
-	__syncthreads();
-}
 
 bool test(float* values, unsigned int size) {
 	float test = values[0];
@@ -407,14 +345,13 @@ bool test(float* values, unsigned int size) {
 int main(int argc, char *argv[])
 {
 	pFile = fopen("log.txt", "a");
-	float elapsedTime = 0.0;
-	float elapsedMemcpy = 0.0;
-	float elapsedKernel = 0.0;
+	int real_size = NUM_VALS;
+	srand(time(NULL));
+	float elapsedTime, elapsedMemcpy, elapsedKernel;
 	
 	cudaEvent_t startEvent, stopEvent;
 	cudaEventCreate(&startEvent);
 	cudaEventCreate(&stopEvent);
-	int real_size = NUM_VALS;
 	printf("Velikost populace: %d\n", real_size);
 
 	int max_size = imin(NUM_VALS_BLOCK, real_size);
@@ -428,9 +365,14 @@ int main(int argc, char *argv[])
 
 	float* device_in;
 	float* device_out;
+	int* device_leader_index;
+	float* device_maximum;
 	float* host_in_start = host_in;
+	float* host_out_start = host_out;
 	gpuErrchk(cudaMalloc((void**)&device_in, max_size * DIMENSION * sizeof(float)));
 	gpuErrchk(cudaMalloc((void**)&device_out, max_size * sizeof(float)));
+	gpuErrchk(cudaMalloc((void**)&device_leader_index, sizeof(int)));
+	gpuErrchk(cudaMalloc((void**)&device_maximum, FITNESS_BLOCKS * sizeof(float)));
 
 	while (max_size > 0) {
 		cudaEventRecord(startEvent, 0);
@@ -439,8 +381,6 @@ int main(int argc, char *argv[])
 		cudaEventSynchronize(stopEvent);
 		cudaEventElapsedTime(&elapsedTime, startEvent, stopEvent);
 		elapsedMemcpy += elapsedTime;
-		//printf("Copy to device %1.3f\n", elapsedTime);
-		//log("copy to device", elapsedTime);
 
 		cudaEventRecord(startEvent, 0);
 		operace<< <BLOCKS, THREADS >> >(device_in, device_out);
@@ -448,10 +388,8 @@ int main(int argc, char *argv[])
 		cudaEventSynchronize(stopEvent);
 		cudaEventElapsedTime(&elapsedTime, startEvent, stopEvent);
 		elapsedKernel += elapsedTime;
-		//printf("Evaluated %1.3f\n", elapsedTime);
-		//log("evaluated", elapsedTime);
 	
-		gpuErrchk(cudaMemcpy(host_out, device_out, sizeof(float)* max_size, cudaMemcpyDeviceToHost));
+		gpuErrchk(cudaMemcpy(host_out_start, device_out, sizeof(float)* max_size, cudaMemcpyDeviceToHost));
 
 		/*
 		for (int i = 0; i < imin(10, max_size); i++)
@@ -461,20 +399,32 @@ int main(int argc, char *argv[])
 			printf("OK\n");
 		*/
 		host_in_start += max_size*DIMENSION;
+		host_out_start += max_size;
 		max_size = imin(real_size, NUM_VALS_BLOCK);
 		real_size -= max_size;
 	}
 
+	for (int i = 0; i < NUM_VALS; i++)
+		printf("%1.3f\n", host_out[i]);
+	
+	max_reduce << <FITNESS_BLOCKS, FITNESS_THREADS >> >(device_out, device_leader_index, device_maximum, NUM_VALS);
+	int* host_leader_index = (int*)malloc(sizeof(int));
+	gpuErrchk(cudaMemcpy(host_leader_index, device_leader_index, sizeof(int), cudaMemcpyDeviceToHost));
+
+	printf("Maximum na indexu %d\n", host_leader_index[0]);
 	printf("Memcpy: %1.3f\n",elapsedMemcpy);
 	printf("Kernel: %1.3f\n", elapsedKernel);
 	cudaFree(device_in);
 	cudaFree(device_out);
+	cudaFree(device_leader_index);
+	cudaFree(device_maximum);
 	cudaFreeHost(host_in);
 	cudaFreeHost(host_out);
 
 	//soma(values, size);
 	cudaEventDestroy(startEvent);
 	cudaEventDestroy(stopEvent);
+	free(host_leader_index);
 	//free(host_in);
 	//free(host_out);
 	fclose(pFile);
