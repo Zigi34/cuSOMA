@@ -17,15 +17,16 @@
 //#define SHARED 32
 
 //POPULATION
-#define NUM_VALS_BLOCK 32
-#define NUM_VALS 32
-#define DIMENSION 16
+#define NUM_VALS_BLOCK 64
+#define NUM_VALS 256
+#define DIMENSION 1024
 
 //THREADS, BLOCKS
-#define THREADS 32
-#define FITNESS_THREADS 32
+#define THREADS 64
+#define FITNESS_THREADS 128
 #define BLOCKS imin(8192, (NUM_VALS_BLOCK+THREADS-1)/THREADS)
 #define FITNESS_BLOCKS imin(8192, (NUM_VALS+FITNESS_THREADS-1)/FITNESS_THREADS)
+#define PRT_BLOCKS imin(8192, (DIMENSION+DIMENSION-1)/THREADS)
 
 //SOLUTION
 #define RANDOM_MAXIMUM 500
@@ -39,7 +40,7 @@
 
 //LEADER
 //__constant__ best_indiv leader[1];
-//__constant__ float config[CONF_PARMS];
+__constant__ float config[DIMENSION];
 
 FILE * pFile;
 
@@ -110,7 +111,6 @@ __global__ void max_reduce(const float* values, int* max_index, float* maximum,
 #pragma endregion
 
 #pragma region RANDOM GENERATOR
-/*
 __global__ void init_rand(curandState *state, size_t size) {
 	int idx = blockIdx.x * blockDim.x + threadIdx.x;
 	if (idx < size)
@@ -122,7 +122,6 @@ __global__ void make_rand(curandState *state, float
 	if (idx < size)
 		randArray[idx] = curand_uniform(&state[idx]);
 }
-*/
 #pragma endregion
 
 #pragma region UTIL FUNCTION
@@ -345,34 +344,40 @@ bool test(float* values, unsigned int size) {
 int main(int argc, char *argv[])
 {
 	pFile = fopen("log.txt", "a");
-	int real_size = NUM_VALS;
 	srand(time(NULL));
-	float elapsedTime, elapsedMemcpy, elapsedKernel;
 	
+	int real_size = NUM_VALS;
+	int max_size = imin(NUM_VALS_BLOCK, real_size);
+	float elapsedTime = 0.0, elapsedMemcpy = 0.0, elapsedKernel = 0.0;
+	float *host_in, *host_out;
 	cudaEvent_t startEvent, stopEvent;
+	
 	cudaEventCreate(&startEvent);
 	cudaEventCreate(&stopEvent);
-	printf("Velikost populace: %d\n", real_size);
 
-	int max_size = imin(NUM_VALS_BLOCK, real_size);
-	float *host_in;// = (float*)malloc(real_size * DIMENSION * sizeof(float));
-	cudaMallocHost(&host_in, real_size * DIMENSION * sizeof(float));
-	float *host_out;// = (float*)malloc(max_size * sizeof(float));
-	cudaMallocHost(&host_out, real_size * sizeof(float));
+	printf("Velikost populace: %d\n", real_size);
 	printf("Max size = %d\n", max_size);
+
+	cudaMallocHost(&host_in, real_size * DIMENSION * sizeof(float));
+	cudaMallocHost(&host_out, real_size * sizeof(float));
+	
 	population_fill(host_in, real_size);
 	real_size -= max_size;
 
-	float* device_in;
-	float* device_out;
+	float *device_in, *device_out, *device_maximum;
+	float* host_leader = (float*)malloc(sizeof(float) * DIMENSION);
 	int* device_leader_index;
-	float* device_maximum;
 	float* host_in_start = host_in;
 	float* host_out_start = host_out;
+	float* dev_prt_vector;
+	curandState* dev_states;
+
 	gpuErrchk(cudaMalloc((void**)&device_in, max_size * DIMENSION * sizeof(float)));
 	gpuErrchk(cudaMalloc((void**)&device_out, max_size * sizeof(float)));
 	gpuErrchk(cudaMalloc((void**)&device_leader_index, sizeof(int)));
 	gpuErrchk(cudaMalloc((void**)&device_maximum, FITNESS_BLOCKS * sizeof(float)));
+	gpuErrchk(cudaMalloc((void**)&dev_prt_vector, DIMENSION * sizeof(float)));
+	gpuErrchk(cudaMalloc((void**)&dev_states, DIMENSION * sizeof(curandState)));
 
 	while (max_size > 0) {
 		cudaEventRecord(startEvent, 0);
@@ -391,42 +396,60 @@ int main(int argc, char *argv[])
 	
 		gpuErrchk(cudaMemcpy(host_out_start, device_out, sizeof(float)* max_size, cudaMemcpyDeviceToHost));
 
-		/*
-		for (int i = 0; i < imin(10, max_size); i++)
-			printf("%1.3f\n", host_out[i]);
-
-		if (test(host_out, max_size))
-			printf("OK\n");
-		*/
 		host_in_start += max_size*DIMENSION;
 		host_out_start += max_size;
 		max_size = imin(real_size, NUM_VALS_BLOCK);
 		real_size -= max_size;
 	}
-
-	for (int i = 0; i < NUM_VALS; i++)
+	
+	printf("Memcpy: %1.3f\n", elapsedMemcpy);
+	printf("Kernel: %1.3f\n", elapsedKernel);
+	
+	for (int i = 0; i < imin(NUM_VALS, 16); i++)
 		printf("%1.3f\n", host_out[i]);
 	
+	cudaEventRecord(startEvent, 0);
 	max_reduce << <FITNESS_BLOCKS, FITNESS_THREADS >> >(device_out, device_leader_index, device_maximum, NUM_VALS);
+	cudaEventRecord(stopEvent, 0);
+	cudaEventSynchronize(stopEvent);
+	cudaEventElapsedTime(&elapsedTime, startEvent, stopEvent);
+	printf("Redukce: %1.3f\n", elapsedTime);
+	
 	int* host_leader_index = (int*)malloc(sizeof(int));
 	gpuErrchk(cudaMemcpy(host_leader_index, device_leader_index, sizeof(int), cudaMemcpyDeviceToHost));
 
+	int index = 0;
+	for (int i = host_leader_index[0]; i < DIMENSION * NUM_VALS; i += DIMENSION) {
+		host_leader[index++] = host_in[i];
+	}
+
+	cudaMemcpyToSymbol(config, host_leader, sizeof(float)* DIMENSION);
+
+	cudaEventRecord(startEvent, 0);
+	init_rand << <PRT_BLOCKS, THREADS >> >(dev_states, DIMENSION);
+	make_rand << <PRT_BLOCKS, THREADS >> >(dev_states, dev_prt_vector, DIMENSION);
+	cudaEventRecord(stopEvent, 0);
+	cudaEventSynchronize(stopEvent);
+	cudaEventElapsedTime(&elapsedTime, startEvent, stopEvent);
+	printf("Random: %1.3f\n", elapsedTime);
+
 	printf("Maximum na indexu %d\n", host_leader_index[0]);
-	printf("Memcpy: %1.3f\n",elapsedMemcpy);
-	printf("Kernel: %1.3f\n", elapsedKernel);
+	
 	cudaFree(device_in);
 	cudaFree(device_out);
 	cudaFree(device_leader_index);
 	cudaFree(device_maximum);
+	cudaFree(dev_prt_vector);
+	cudaFree(dev_states);
+	
 	cudaFreeHost(host_in);
 	cudaFreeHost(host_out);
-
-	//soma(values, size);
+	
 	cudaEventDestroy(startEvent);
 	cudaEventDestroy(stopEvent);
+
+	free(host_leader);
 	free(host_leader_index);
-	//free(host_in);
-	//free(host_out);
 	fclose(pFile);
 }
 

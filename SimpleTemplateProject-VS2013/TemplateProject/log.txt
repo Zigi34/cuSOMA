@@ -1919,3 +1919,4 @@
 (evaluated) elapsed: 0.221
 (copy to device) elapsed: 0.159
 (evaluated) elapsed: 0.221
+(random) elapsed: 8.091
